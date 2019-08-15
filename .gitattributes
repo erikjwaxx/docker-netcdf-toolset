@@ -1,1 +1,2 @@
 hdf5-1.10.5.tar.bz2 filter=lfs diff=lfs merge=lfs -text
+netcdf-c-4.7.0.tar.gz filter=lfs diff=lfs merge=lfs -text
