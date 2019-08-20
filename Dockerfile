@@ -72,7 +72,7 @@ RUN find $OUT -type f -executable -exec sh -c 'test "$(head -c 2 "$1")" != "#!"'
 FROM alpine:latest
 
 RUN apk upgrade && \
-    apk add expat gsl libcurl libgcc libstdc++ nghttp2-libs
+    apk add bash expat gsl libcurl libgcc libstdc++ nghttp2-libs
 
 COPY --from=build-ctx /buildroot/ /usr/
 
