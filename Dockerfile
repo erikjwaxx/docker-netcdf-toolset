@@ -10,7 +10,7 @@ WORKDIR $SRC
 ADD *.tar.* ./
 
 ENV HDF5_SRC=$SRC/hdf5-1.10.5 \
-    NETCDF_C_SRC=$SRC/netcdf-c-4.7.0 \
+    NETCDF_C_SRC=$SRC/netcdf-c-4.7.1 \
     UDUNITS_SRC=$SRC/udunits-2.2.26 \
     NCO_SRC=$SRC/nco-4.8.1 \
     CXXFLAGS="$CFLAGS"
@@ -75,7 +75,3 @@ RUN apk upgrade && \
     apk add bash expat gsl libcurl libgcc libstdc++ nghttp2-libs
 
 COPY --from=build-ctx /buildroot/ /usr/
-
-             
-
-
